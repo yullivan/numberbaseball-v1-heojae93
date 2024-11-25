@@ -17,7 +17,9 @@ public class Application {
 
 
         boolean isCorrect = false;
-        int strike;
+        int strike = 0;
+        int ball = 0;
+
 
         System.out.println("숫자 야구 게임을 시작합니다!");
         System.out.println("1부터 9까지의 서로 다른 숫자 3개를 맞춰보세요.");
@@ -32,6 +34,8 @@ public class Application {
             int user3 = scanner.nextInt();
 
             strike = 0;
+            ball = 0;
+
             if (user1 == cumputer1) {
                 strike++;
             }
@@ -42,12 +46,16 @@ public class Application {
                 strike++;;
             }
 
+            if (user1 == cumputer2 || user1 == cumputer3) ball++;
+            if (user2 == cumputer1 || user2 == cumputer3) ball++;
+            if (user3 == cumputer1 || user3 == cumputer2) ball++;
+
             if (strike == 3) {
                 System.out.println("축하합니다. 정답을 맞추셨습니다.");
                 isCorrect = true;
             }
             else {
-                System.out.println("스트라이크 " + strike);
+                System.out.println(strike + "스트라이크 " + ball + " 볼 ");
             }
 
 
