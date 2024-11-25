@@ -55,7 +55,7 @@ public class Application {
                 isCorrect = true;
             }
             else {
-                System.out.println(strike + "스트라이크 " + ball + " 볼 ");
+                System.out.println(strike + "스트라이크 " + ball + "볼");
             }
 
 
